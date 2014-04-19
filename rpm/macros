@@ -1,0 +1,11 @@
+%_topdir /data/dist/build
+%_tmppath /tmp
+%_signature gpg
+%_gpg_path /root/.gnupg
+%_gpg_name Shaun ASHBY
+%_gpgbin /usr/bin/gpg
+
+# Custom macros for my dist area/process:
+%dist ashby
+%packager Shaun ASHBY <shaun@ashby.ch>
+%vendor ASHBY <http://www.ashby.ch/>
