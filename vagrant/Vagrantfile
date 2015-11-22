@@ -8,12 +8,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/precise64"
 
   config.vm.provision "shell", privileged: true, inline: <<-EOF
-    if ! [[ -f ${HOME/test.sh ]]; then
+    if ! [[ -f ${HOME}/test.sh ]]; then
       echo "-- going to run the test script"
     fi
 
     echo "-- Updating packages"
-    apt-get update
+    apt-get -y upgrade
+    apt-get -y update
     apt-get install -y git libssl-dev
   EOF
 
